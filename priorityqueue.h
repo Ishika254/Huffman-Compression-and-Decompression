@@ -1,24 +1,28 @@
 // code written by sanxkar
 
 
-#ifndef PRIORITYQUEUE_H
-#define PRIORITYQUEUE_H
+#ifndef PriorityQueue_h
+#define PriorityQueue_h
 
 #include "huffmannode.h"
+
 class PriorityQueue
 {
 private:
-    static constexpr int CAPACITY = 256;
-    HuffmanNode* heap[CAPACITY];
+    HuffmanNode* heap[256];
     int heapSize;
+
     void heapifyUp(int index);
     void heapifyDown(int index);
+
 public:
     PriorityQueue();
-    bool insert(HuffmanNode* node);
+
+    void insert(HuffmanNode* node);
     HuffmanNode* getMin();
-    int size() const noexcept;
-    bool empty() const noexcept;
+
+    int size();
+    bool empty();
 };
 
-#endif 
+#endif
