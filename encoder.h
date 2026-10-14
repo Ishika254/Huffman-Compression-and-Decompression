@@ -42,6 +42,8 @@ private:
         int bitCount) const;
 
 public:
+
+//important function manager 
     bool compressFile(
         std::string inputFileName,
         std::string compressedFileName,
